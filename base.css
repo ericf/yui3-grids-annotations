@@ -1,0 +1,117 @@
+/**
+ * Base Styles
+ */
+
+html { overflow-y: scroll; }
+body { font: 14px/1.5 sans-serif; } /* 14px / 21px */
+
+select, input, button, textarea { font: 99% sans-serif; }
+
+h1 { font-size: 200%;	line-height: 1.250;		margin: 21px 0; }	/* 28px / 35px */
+h2 { font-size: 150%;	line-height: 1.3334;	margin: 14px 0; }	/* 21px / 28px */
+h3 { font-size: 128.6%;	line-height: 1.556;		margin: 14px 0; }	/* 18px / 28px */
+h4 { font-size: 114.3%;	line-height: 1.313;		margin: 7px 0; }	/* 16px / 21px */
+h5 { font-size: 100%;	line-height: 1.500;		margin: 7px 0; }	/* 14px / 21px */
+h6 { font-size: 85.7%;	line-height: 1.167;		margin: 7px 0; }	/* 12px / 14px */
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+fieldset, p, pre, table { margin: 0 0 21px 0; }
+
+blockquote, dl, ol, ul { margin: 21px 20px; }
+
+dl, ol, ul { margin-left: 40px; }
+
+dd { margin: 7px 0 7px 20px; }
+
+li { margin: 7px 0; }
+
+ol li { list-style: decimal outside; }
+ul li { list-style: disc outside; }
+
+small {
+	font-size: 85.7%;
+}
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+th, td {
+	border: 1px solid #000;
+	padding: 5px;
+}
+td, td img { vertical-align: top; }
+th {
+	font-weight: bold;
+	text-align: center;
+}
+caption {
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+textarea { overflow: auto; }
+
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+label,
+input[type=button],
+input[type=submit],
+button {
+	cursor: pointer;
+}
+
+button {
+	width: auto;
+	overflow: visible;
+}
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+.hidden { display: none; visibility: hidden; } 
+.visuallyhidden {
+	position: absolute !important;    
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+.invisible { visibility: hidden; }
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+
+.clearfix:before, .clearfix:after {
+	content: "\0020"; display: block; height: 0; visibility: hidden;	
+} 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+@media print {
+	* { background: transparent !important; color: #000 !important; text-shadow: none !important; }
+	a, a:visited { color: #000 !important; text-decoration: underline; }
+	a:after { content: " (" attr(href) ")"; } 
+	abbr:after { content: " (" attr(title) ")"; }
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+	tr, img { page-break-inside: avoid; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3{ page-break-after: avoid; }
+}

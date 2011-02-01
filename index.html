@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>YUI 3 CSS Grids Annotations</title>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&amp;3.2.0/build/cssfonts/fonts-min.css&amp;3.2.0/build/cssgrids/grids-min.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Allerta" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Just+Another+Hand" />
+		<link rel="stylesheet" href="base.css" />
+		<style>
+			
+			/* Elements */
+			
+			html { background: #f7f7f7; }
+			body {
+				min-width: 960px;
+				padding: 28px 0;
+				color: #222;
+				text-shadow: 0 1px 1px #fff;
+				font: 18px/1.55556 "Lucida Grande", Helvetica, Arial, sans-serif;
+			}
+			
+			h1, h2, h3, h4, h5, h6 {
+				font-family: Allerta, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #222; /* no RGBA */
+				color: rgba(0,0,0, 0.50);
+				text-shadow: 0 1px 1px rgba(255,255,255, 0.15);
+				font-weight: normal;
+			}
+			h3, h4 {
+				color: #222; /* no RGBA */
+				color: rgba(0,0,0, 0.75);
+				text-shadow: 0 1px 1px rgba(255,255,255, 0.25);
+			}
+			h5, h6 {
+				color: #222;
+				text-shadow: 0 1px 1px rgba(255,255,255, 0.50);
+				font-weight: bold;
+			}
+			
+			a:link,
+			a:visited,
+			a:hover,
+			a:focus,
+			a:active {
+				color: #7B0099;
+				text-decoration: none;
+			}
+			a:hover,
+			a:focus {
+				text-decoration: underline;
+			}
+			
+			/* Classes */
+			
+			.container {
+				width: 960px;
+				margin: 0 auto;
+			}
+			
+			.section { margin: 0 20px; }
+			
+			/* Content */
+			
+			#header {}
+			#header h1 em {
+				font: 125%/1.4 normal "Just Another Hand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				letter-spacing: 2px;
+			}
+			
+			#content {
+				padding: 42px 0;
+			}
+			
+			#bookmarklet {
+				display: block;
+				width: 280px;
+				margin: 0 auto;
+				padding: 0 10px;
+				-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+				-moz-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+				box-shadow: 0 0 7px rgba(0,0,0,0.4);
+				background: #7B0099;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				color: #fff;
+				text-shadow: 0 -1px 1px rgba(0,0,0, 0.75);
+				font: 150%/2.0 normal Allerta, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-align: center;
+			}
+			#bookmarklet em {
+				font: 125%/1.4 normal "Just Another Hand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				letter-spacing: 2px;
+			}
+			#bookmarklet:hover {
+				
+				text-decoration: none;
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+		
+			<div id="header" class="section">
+				<h1><a href="http://developer.yahoo.com/yui/3/cssgrids/">YUI 3 CSS Grids</a> <em>Annotations</em></h1>
+				<p>
+					A <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> that annotates the grid structure
+					of a web page using <a href="http://developer.yahoo.com/yui/3/cssgrids/">YUI 3 CSS Grids</a>.
+				</p>
+			</div>
+			
+			<div id="content" class="section">
+				<a id="bookmarklet" href="javascript:(function(){var d=document,h=d.getElementsByTagName('head')[0]||d.documentElement,s=d.createElement('script');s.setAttribute('src','http://oddnut.com/yui3-grids-annotations/bookmarklet.js');h.appendChild(s);}());" title="Drag to bookmarks bar">
+					<em>Annotate</em> YUI 3 Grids
+				</a>
+			</div>
+			
+		</div>
+		
+		<script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+		<script>
+			YUI().use('node-base', function(Y){
+				
+				Y.on('click', function(e){
+					e.preventDefault();
+					alert(this.get('title'));
+				}, '#bookmarklet');
+				
+			});
+		</script>
+	</body>
+</html>
